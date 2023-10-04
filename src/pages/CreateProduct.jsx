@@ -16,7 +16,12 @@ function CreateProduct() {
   function handleChange(event) {
     const { name, value, type } = event.target;
 
-    const newValue = type === "number" ? parseFloat(value) : value;
+    const newValue =
+      name === "available"
+        ? value === "true"
+        : type === "number"
+        ? parseFloat(value)
+        : value;
 
     setProduct({ ...product, [name]: newValue });
 
