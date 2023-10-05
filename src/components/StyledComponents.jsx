@@ -15,12 +15,13 @@ export const Content = styled.div`
   max-width: 500px;
   gap: 30px;
   border: black solid 1px;
+  /* background-color: lightgreen; */
   background-color: ${(props) =>
     props.id % 2 === 0
       ? "#59adea"
       : props.id % 2 === 1
       ? "lightgreen"
-      : "black"};
+      : "lightgreen"};
 `;
 
 export const Text = styled.p`
